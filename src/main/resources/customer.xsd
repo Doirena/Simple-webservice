@@ -1,0 +1,42 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://dovile.com/simple-web-service"
+           targetNamespace="http://dovile.com/simple-web-service"
+           elementFormDefault="qualified">
+
+    <xs:element name="getAllCustomersRequest">
+        <xs:complexType/>
+    </xs:element>
+
+    <xs:element name="getAllCustomersResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="customerInfo" type="tns:customerInfo" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="customerInfo">
+        <xs:sequence>
+            <xs:element name="customerId" type="xs:int"/>
+            <xs:element name="first_name" type="xs:string"/>
+            <xs:element name="last_name" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="updateCustomerRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="customerId" type="xs:int"/>
+                <xs:element name="first_name" type="xs:string"/>
+                <xs:element name="last_name" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="updateCustomerResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="customerInfo" type="tns:customerInfo"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
