@@ -8,11 +8,15 @@ import org.springframework.stereotype.Component;
  *
  * @author Dovile Barkauskaite <barkauskaite.dovile@gmail.com>
  */
-
 @Component
 public class CustomerInfoMapper {
 
     public CustomerInfo mapToCustomerResponse(CustomerEntity customerEntity) {
-        return new CustomerInfo(customerEntity.getId(), customerEntity.getFirst_name(), customerEntity.getLast_name());
+        CustomerInfo customerInfo = new CustomerInfo();
+        customerInfo.setCustomerId(customerEntity.getId());
+        customerInfo.setFirstName(customerEntity.getFirst_name());
+        customerInfo.setLastName(customerEntity.getLast_name());
+        return  customerInfo;
+//        return new CustomerInfo(customerEntity.getId(), customerEntity.getFirst_name(), customerEntity.getLast_name());
     }
 }
