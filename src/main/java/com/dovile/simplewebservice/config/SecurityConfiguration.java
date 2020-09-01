@@ -18,7 +18,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 
         auth.inMemoryAuthentication()
-                .withUser("user").password("{noop}dovile").roles("USER");
+                .withUser("user").password("{noop}password").roles("USER");
     }
 
     @Override
