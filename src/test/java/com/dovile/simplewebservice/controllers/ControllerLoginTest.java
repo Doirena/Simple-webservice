@@ -27,7 +27,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 @SpringBootTest
 @AutoConfigureMockMvc
 @ActiveProfiles("test")
-public class ControllerRLoginTest {
+public class ControllerLoginTest {
 
     @Autowired
     private MockMvc mockMvc;

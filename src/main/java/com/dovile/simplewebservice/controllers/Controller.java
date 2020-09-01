@@ -18,7 +18,7 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping("/api")
-public class ControllerR {
+public class Controller {
 
     @Autowired
     CustomerService customerService;
