@@ -4,6 +4,11 @@ import com.dovile.simple_web_service.CustomerInfo;
 import com.dovile.simplewebservice.entities.CustomerEntity;
 import org.springframework.stereotype.Component;
 
+/**
+ *
+ * @author Dovile Barkauskaite <barkauskaite.dovile@gmail.com>
+ */
+
 @Component
 public class CustomerInfoMapper {
 

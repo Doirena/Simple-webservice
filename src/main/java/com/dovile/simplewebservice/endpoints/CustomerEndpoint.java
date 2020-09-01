@@ -17,6 +17,10 @@ import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ *
+ * @author Dovile Barkauskaite <barkauskaite.dovile@gmail.com>
+ */
 @Endpoint
 @AllArgsConstructor
 public class CustomerEndpoint {
@@ -24,6 +28,10 @@ public class CustomerEndpoint {
     private CustomerService customerService;
     private CustomerInfoMapper customerInfoMapper;
 
+    /**
+     *
+     * @return All Customers list
+     */
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getAllCustomersRequest")
     @ResponsePayload
     public GetAllCustomersResponse getAllArticles() {
@@ -37,6 +45,12 @@ public class CustomerEndpoint {
         return response;
     }
 
+    /**
+     *
+     * @param request
+     * @return update Customer
+     * @throws ResourceNotFoundException
+     */
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "updateCustomerRequest")
     @ResponsePayload
     public UpdateCustomerResponse updateCustomer(@RequestPayload UpdateCustomerRequest request) throws ResourceNotFoundException {
