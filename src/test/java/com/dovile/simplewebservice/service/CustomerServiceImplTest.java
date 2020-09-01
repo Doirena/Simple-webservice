@@ -98,11 +98,11 @@ public class CustomerServiceImplTest {
         customerEntity.setFirst_name("Tom");
         when(customerRepository.save(customerEntity)).thenReturn(customerEntity);
 
-        ResponseEntity<CustomerEntity> expectedCustomer = customerService.updateCustomer(new Customer("Tom", "Anna1"), id);
+        CustomerEntity expectedCustomer = customerService.updateCustomer(new Customer("Tom", "Anna1"), id);
 
         verify(customerRepository, times(1)).save(customerEntity);
         assertThat(expectedCustomer).isNotNull();
-        assertEquals(customerEntity.getFirst_name(), expectedCustomer.getBody().getFirst_name());
+        assertEquals(customerEntity.getFirst_name(), expectedCustomer.getFirst_name());
     }
 
     @Test

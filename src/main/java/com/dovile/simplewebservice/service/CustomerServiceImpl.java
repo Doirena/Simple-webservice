@@ -44,7 +44,7 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public ResponseEntity<CustomerEntity> updateCustomer(Customer customer, Integer id) throws ResourceNotFoundException {
+    public CustomerEntity updateCustomer(Customer customer, Integer id) throws ResourceNotFoundException {
         CustomerEntity customerEntity = customerRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Customer not found on: " + id));
         if(customer.getFirst_name() !=null) {
@@ -54,7 +54,7 @@ public class CustomerServiceImpl implements CustomerService {
             customerEntity.setLast_name(customer.getLast_name());
         }
         final CustomerEntity updatedCustomer = customerRepository.save(customerEntity);
-        return ResponseEntity.ok(updatedCustomer);
+        return updatedCustomer;
     }
 
     @Override

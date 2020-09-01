@@ -40,7 +40,7 @@ public class ControllerR {
     }
 
     @PutMapping("/customer/{id}")
-    public ResponseEntity<CustomerEntity> updateCustomer(
+    public CustomerEntity updateCustomer(
             @PathVariable(value = "id") Integer id,
             @RequestBody @Valid Customer customer)
             throws ResourceNotFoundException {

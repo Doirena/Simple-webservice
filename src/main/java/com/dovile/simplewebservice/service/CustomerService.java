@@ -42,7 +42,7 @@ public interface CustomerService {
      * @return update exist customer which clients choose and what he wants to change
      * @throws ResourceNotFoundException
      */
-    ResponseEntity<CustomerEntity> updateCustomer(Customer customer, Integer id) throws ResourceNotFoundException;
+    CustomerEntity updateCustomer(Customer customer, Integer id) throws ResourceNotFoundException;
 
     /**
      *
