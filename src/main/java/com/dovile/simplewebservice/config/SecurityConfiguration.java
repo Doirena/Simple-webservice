@@ -1,4 +1,4 @@
-package com.dovile.simplewebservice.securityconfig;
+package com.dovile.simplewebservice.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
