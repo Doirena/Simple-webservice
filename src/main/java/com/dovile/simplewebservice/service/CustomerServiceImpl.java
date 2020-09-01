@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.logging.Logger;
 
 /**
  *
@@ -18,6 +19,8 @@ import java.util.Map;
  */
 @Service
 public class CustomerServiceImpl implements CustomerService {
+
+    private final static Logger logger = Logger.getLogger(CustomerServiceImpl.class.getName());
 
     @Autowired
     private CustomerRepository customerRepository;
@@ -40,6 +43,7 @@ public class CustomerServiceImpl implements CustomerService {
         customerEntity.setFirst_name(customer.getFirst_name());
         customerEntity.setLast_name(customer.getLast_name());
         customerRepository.save(customerEntity);
+        logger.info("Create new Customer");
         return customerEntity;
     }
 
@@ -54,6 +58,7 @@ public class CustomerServiceImpl implements CustomerService {
             customerEntity.setLast_name(customer.getLast_name());
         }
         final CustomerEntity updatedCustomer = customerRepository.save(customerEntity);
+        logger.info("Update is successful");
         return updatedCustomer;
     }
 
