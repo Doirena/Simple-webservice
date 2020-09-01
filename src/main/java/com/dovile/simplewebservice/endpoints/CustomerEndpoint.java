@@ -24,7 +24,9 @@ import java.util.stream.Collectors;
 @Endpoint
 @AllArgsConstructor
 public class CustomerEndpoint {
+
     private static final String NAMESPACE_URI = "http://dovile.com/simple-web-service";
+
     private CustomerService customerService;
     private CustomerInfoMapper customerInfoMapper;
 
@@ -53,7 +55,8 @@ public class CustomerEndpoint {
      */
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "updateCustomerRequest")
     @ResponsePayload
-    public UpdateCustomerResponse updateCustomer(@RequestPayload UpdateCustomerRequest request) throws ResourceNotFoundException {
+    public UpdateCustomerResponse updateCustomer(@RequestPayload UpdateCustomerRequest request)
+            throws ResourceNotFoundException {
         Customer customer= new Customer(request.getFirstName(), request.getLastName());
         CustomerInfo customerInfo = customerInfoMapper
                 .mapToCustomerResponse(customerService.updateCustomer(customer,request.getCustomerId()));

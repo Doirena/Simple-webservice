@@ -1,15 +1,11 @@
 package com.dovile.simplewebservice.domain;
 
 /**
- *
  * @author Dovile Barkauskaite <barkauskaite.dovile@gmail.com>
  */
 public class Customer {
     private String first_name;
     private String last_name;
-
-    public Customer() {
-    }
 
     public Customer(String first_name, String last_name) {
         this.first_name = first_name;
