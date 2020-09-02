@@ -17,6 +17,8 @@ public class CustomerInfoMapper {
         customerInfo.setFirstName(customerEntity.getFirst_name());
         customerInfo.setLastName(customerEntity.getLast_name());
         return  customerInfo;
+
+        //Todo This will be better, but when maven generate CustomerInfo class, doesn't generate constructor with value, constructor have been added by hand, but if someone clean and install maven restart constructor and its disappear, program shows error
 //        return new CustomerInfo(customerEntity.getId(), customerEntity.getFirst_name(), customerEntity.getLast_name());
     }
 }
