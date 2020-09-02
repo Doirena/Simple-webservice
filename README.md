@@ -45,4 +45,3 @@ If POSTMAN is used: http://localhost:8080/soapws
         </art:updateCustomerRequest>
      </soapenv:Body>
   </soapenv:Envelope>```
-
