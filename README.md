@@ -1,6 +1,7 @@
 # Simple-webservice
-Simple webservice which has rest and soap implementations. 
-Also this service has basic authentication with username: <b>user</b> and password: <b> password</b>.  
+Simple webservice which has rest and soap implementations.  
+Rest has HTTP Basic authentication with username: <b>user</b> and password: <b> password</b>.   
+Soap has Security with WS-Security. Authentication with username: <b>user</b> and password: <b> password</b>.  
 Rest implementation has methods: <i>getAllCustomers, getCustomerById, createCustomer, updateCustomer, deleteCustomer</i>.  
 Soap implementation has methods: <i>getAllCustomers, updateCustomer</i>.
 
