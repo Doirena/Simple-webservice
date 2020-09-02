@@ -25,7 +25,7 @@ If POSTMAN is used: http://localhost:8080/soapws
     <soapenv:Body>
        <art:getAllCustomersRequest/>
     </soapenv:Body>
- </soapenv:Envelope>```
+ </soapenv:Envelope>
  ```
  <b>For PUT method:</b>
  ```<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:art="http://dovile.com/simple-web-service">
@@ -44,4 +44,4 @@ If POSTMAN is used: http://localhost:8080/soapws
           <art:last_name>Tailor</art:last_name>
         </art:updateCustomerRequest>
      </soapenv:Body>
-  </soapenv:Envelope>```
+  </soapenv:Envelope>
