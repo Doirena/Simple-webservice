@@ -3,7 +3,6 @@ package com.dovile.simplewebservice.service;
 import com.dovile.simplewebservice.domain.Customer;
 import com.dovile.simplewebservice.entities.CustomerEntity;
 import com.dovile.simplewebservice.exception.ResourceNotFoundException;
-import org.springframework.http.ResponseEntity;
 
 import java.util.List;
 import java.util.Map;

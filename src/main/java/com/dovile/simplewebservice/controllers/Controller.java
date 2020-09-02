@@ -48,7 +48,7 @@ public class Controller {
     }
 
     @DeleteMapping("/customer/{id}")
-    public Map<String, Boolean> deleteOwner(@PathVariable(value = "id") Integer id)
+    public Map<String, Boolean> deleteCustomer(@PathVariable(value = "id") Integer id)
             throws Exception {
         return customerService.deleteCustomer(id);
     }

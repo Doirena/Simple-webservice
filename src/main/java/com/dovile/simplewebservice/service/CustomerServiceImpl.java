@@ -5,7 +5,6 @@ import com.dovile.simplewebservice.entities.CustomerEntity;
 import com.dovile.simplewebservice.exception.ResourceNotFoundException;
 import com.dovile.simplewebservice.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;

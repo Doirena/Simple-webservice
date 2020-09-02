@@ -106,7 +106,7 @@ public class CustomerServiceImplTest {
     }
 
     @Test
-    public void deleteOwnerById_test() throws Exception {
+    public void deleteCustomer_test() throws Exception {
         Integer id = 1;
         CustomerEntity customerEntity = new CustomerEntity(id, "Anna", "Anna1");
         when(customerRepository.findById(id)).thenReturn(java.util.Optional.of(customerEntity));
